@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" href="https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=7c6e5d344de060b110c8a21e781b300a&units=metric">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+    <div class="top-right">
+        <i class="fas fa-sun" style="margin-right: 5px;"></i>
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle"></label>
+        <i class="fas fa-moon" style="margin-left: 5px;"></i>
+    </div>
+    <div class="weather-container">
+      <input type="text" id="city-input" placeholder="Enter city name">
+      <button onclick="getWeather()">Get Weather!</button>
+      <div id="weather-info" class="hidden">
+            <div id="weather-main">
+                <div>
+                    <h2 id="city-name"></h2>
+                    <div id="weather-icon"></div>
+                </div>
+                <div class="information">
+                    <div>
+                        <p id="weather-description"></p>
+                        <video src="cloud-v.mp4" type="video/mp4 loop mute" autoplay loop muted></video>
+                    </div>
+                    <div>
+                        <p id="temperature"></p>
+                        <video src="temp.mp4" type="video/mp4 loop mute" autoplay loop muted></video>
+                    </div>
+                    <div>
+                        <p id="humidity"></p>
+                        <video src="humidity.mp4" type="video/mp4 loop mute" autoplay loop muted></video>
+                    </div>
+                    <div>
+                        <p id="wind-speed"></p>
+                        <video src="wind.mp4" type="video/mp4 loop mute" autoplay loop muted></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="foot">&copy;Designed By Rajapriya 2024</p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
